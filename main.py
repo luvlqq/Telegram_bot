@@ -1,6 +1,8 @@
 import random
+import floder
+import asyncio
 import os
-from aiogram import Bot, types
+from aiogram import Bot, types, filters
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 
@@ -37,18 +39,7 @@ async def cmd_start(message: types.Message):
     keyboard.insert(*nBut)
     keyboard.add(*buttons)
     keyboard.insert(*bat)
-    await message.answer("Ну привет гуль ass ранга. Может хочешь посчитать? ", reply_markup=keyboard)
-
-
-# @dp.message_handler(content_types=types.ContentType.ANY)
-# async def echo(message: types.Message):
-#     if message.text:
-#         # Тут делайте всё, что нужно, если юзер отправил обычное сообщение
-#         if message == '1000-7':
-#             await message.answer("Вы отправили текст!")
-#     else:
-#         # Всё, что не попадает под текст
-#         await message.answer("Что-то не на гулином")
+    await message.answer("Ну привет гуль ass ранга. Может хочешь посчитать? Чуть что, можно написать /help", reply_markup=keyboard)
 
 
 @dp.message_handler(lambda message: message.text == "Что-то умное")
@@ -66,11 +57,14 @@ async def info(message: types.Message):
     await message.answer('Я умею немного общаться. Ты можешь спросить у меня дед инсайд треки(треки), посчитать со мной 1000-7(1000-7) и позже будет еще. Но пока моему хозяину немного впадлу что-то добавлять еще.')
 
 
-#
-# @dp.message_handler(lambda message: message.text == "Пикча")
-# async def pikcha(message: types.Message):
-#     await message.answer(for filename in os.listdir('images'):
-#         filename[filename.rfind(".") + 1:] in ['jpg', 'jpeg', 'png'])
+@dp.message_handler(lambda message: message.text == "Пикча")
+async def photo(message: types.Message):
+    await types.ChatActions.upload_photo()
+    media = types.MediaGroup()
+    media.attach_photo(types.InputFile('images/IMG_7599.JPG'),random.choice(list(open('citati.txt', encoding= 'UTF-8'))))
+    # media.attach_photo(random.choice('images'),random.choice(list(open('citati.txt', encoding='UTF-8'))))
+    # types.InputFile('images/IMG_7599.JPG')
+    await message.answer_media_group(media=media)
 
 
 def main():
