@@ -1,6 +1,11 @@
 # Telegram_bot
-deadInside simple telegram bot
+## DeadInside simple telegram bot
 coding by aiogram 
+## **Что он умеет ?**
+
++ Реагирует на простые команды
++ Возможность отправлять случайный текст вместе с изображением
++ Ответы на некоторые вопросы
 
 Скриншоты из телеграмма:
 
