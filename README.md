@@ -1,3 +1,4 @@
+![py](https://img.shields.io/pypi/pyversions/3?style=flat-square)
 # Telegram_bot
 ## DeadInside simple telegram bot
 coding by aiogram \
