@@ -1,4 +1,5 @@
 ![py](https://img.shields.io/pypi/pyversions/3?style=flat-square)
+![size](https://img.shields.io/github/languages/code-size/OhMyLuaL/Telegram_bot?style=flat-square)
 # Telegram_bot
 ## DeadInside simple telegram bot
 coding by aiogram \
