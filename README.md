@@ -1,6 +1,6 @@
 # Telegram_bot
 ## DeadInside simple telegram bot
-coding by aiogram
+coding by aiogram \
 [aiogram documentation](https://docs.aiogram.dev/en/latest/)
 ## **Что он умеет ?**
 
