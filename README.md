@@ -7,7 +7,7 @@ coding by aiogram
 + Возможность отправлять случайный текст вместе с изображением
 + Ответы на некоторые вопросы
 
-Скриншоты из телеграмма:
+# Скриншоты из телеграмма:
 
 ![Image alt](https://github.com/ohmylual/telegram_bot/raw/main/scr/1.png)
 
